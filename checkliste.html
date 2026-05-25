@@ -1,0 +1,87 @@
+<!-- Wrapper til hele checklisten -- >
+<div class="check-grid"> 
+
+<!-- Første kolonne -- >
+<div class="checkliste"> 
+<label><input type="checkbox"> Drikkevand</label> <label><input type="checkbox"> Mad</label> 
+<label><input type="checkbox"> Nødvendig medicin</label> 
+<label><input type="checkbox"> Førstehjælpskasse</label> 
+</div> 
+
+<!-- Anden kolonne --> 
+<div class="checkliste"> 
+<label><input type="checkbox"> Powerbank</label> <label><input type="checkbox"> Lommelygte</label> <label><input type="checkbox"> Batterier</label> <label><input type="checkbox"> Radio</label> 
+
+</div> <!-- Tredje kolonne --> 
+<div class="checkliste"> 
+<label><input type="checkbox"> Toiletpapir</label> <label><input type="checkbox"> Hånddesinfektion</label> <label><input type="checkbox"> Bleer, bind, tamponer</label> <label><input type="checkbox"> Tæpper, dyner, varmt tøj</label> 
+</div> 
+</div> 
+
+<style> 
+/* Grid-container som holder alle kolonner */ 
+.check-grid { 
+/* Gør layoutet til et grid */
+display: grid; 
+/* Laver 3 kolonner */ 
+grid-template-columns: repeat(3, auto);
+/* Afstand mellem kolonner */ 
+gap: 120px; 
+/* Centrerer hele gridet */ 
+justify-content: center; }
+ 
+/* Styling til hver enkelt checkliste-kolonne */ 
+.checkliste { 
+/* Elementerne står under hinanden */ 
+display: flex; flex-direction: column; 
+/* Afstand mellem hvert punkt */ 
+gap: 65px; } 
+
+/* Styling til teksten ved siden af checkbox */ 
+.checkliste label { 
+/* Tekststørrelse */ 
+font-size: 26px; 
+/* Hvid tekst */ 
+color: white; 
+/* Checkbox og tekst står på samme linje */ 
+display: flex; align-items: center; 
+/* Afstand mellem checkbox og tekst */ 
+gap: 18px; } 
+
+/* Styling af checkbox */ 
+.checkliste input[type="checkbox"] { 
+/* Størrelse på checkbox */ 
+width: 40px; height: 40px; 
+/* Musen bliver til hånd når man hover */ 
+cursor: pointer; 
+/* Farven på checkmark */ 
+accent-color: white; } 
+
+/*Responsivt design til mobil*/
+@media(max-width:929px){
+  .check-grid{
+/*Skifter til 1 kolonne på mobil*/
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .checkliste{
+/* Listerne stables lodret */
+    display:flex ;
+    flex-direction:column ;
+    justify-content:flex-start ;
+    gap:12px;
+  }
+
+  .checkliste label{
+/* Gør checkbox og tekst pænt på mobil */
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    line-height:1.4;
+    padding:10px 12px;
+    margin: 0;
+  }
+}
+</style>
