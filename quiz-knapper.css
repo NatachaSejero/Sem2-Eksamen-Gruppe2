@@ -1,0 +1,19 @@
+/* Start quiz knap */
+.qmn_btn,
+.qsm-quiz-container.qmn_quiz_container .qmn_btn,
+.qsm-quiz-container.qmn_quiz_container .btn {
+/* Rød baggrund */
+    background-color: #da2828 !important;
+/* Tekst farve */
+    color: white !important;
+}
+
+/* Hover effekt */
+.qmn_btn:hover,
+.qsm-quiz-container.qmn_quiz_container .qmn_btn:hover,
+.qsm-quiz-container.qmn_quiz_container .btn:hover {
+/* Mørkere rød når musen er henover */
+    background-color: #b71f1f !important;
+/* Tekst farve */
+    color: white !important;
+}
