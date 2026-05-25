@@ -1,0 +1,6 @@
+/* Header Hover */
+.menu a:hover,
+.menu .current-menu-item a,
+.menu .current_page_item a {
+    color: #da2828 !important;
+}
